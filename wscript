@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 
-APPNAME = "fmt"
+APPNAME = "source_location"
 VERSION = "3.0.0"
 
 
