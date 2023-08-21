@@ -1,0 +1,14 @@
+// Copyright (c) Steinwurf ApS 2020.
+// All Rights Reserved
+
+#include <iostream>
+#include <source_location/source_location.hpp>
+
+int main() {
+  source_location loc(source_location::current());
+  std::cout << loc.file_name() << std::endl;
+  std::cout << loc.function_name() << std::endl;
+  std::cout << loc.line() << std::endl;
+  source_location s2 = src_clone(); // location should point here
+  std::cout << s2.line() << ' ' << s2.function_name() << '\n';
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "waf-tools",
+    "resolver": "git",
+    "method": "semver",
+    "major": 5,
+    "sources": [
+      "github.com/steinwurf/waf-tools.git"
+    ]
+  },
+  {
+    "name": "fmt-source",
+    "resolver": "git",
+    "method": "checkout",
+    "checkout": "e384945",
+    "sources": [
+      "github.com/flagarde/source_location.git"
+    ]
+  }
+]
