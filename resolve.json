@@ -9,7 +9,7 @@
     ]
   },
   {
-    "name": "fmt-source",
+    "name": "source_location-source",
     "resolver": "git",
     "method": "checkout",
     "checkout": "e384945",

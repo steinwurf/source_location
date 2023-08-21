@@ -1,4 +1,4 @@
-fmt
-===
+source_location
+===============
 
-``fmt`` build script wrapper for the waf build system.
+``source_location`` build script wrapper for the waf build system.
