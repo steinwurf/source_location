@@ -16,8 +16,10 @@ if(NOT DEFINED STEINWURF_RESOLVE)
   endif()
 
   set(STEINWURF_RESOLVE "${CMAKE_CURRENT_SOURCE_DIR}/resolve_symlinks")
-  set(STEINWURF_TOP_NAME source_location)
 endif()
+
+# Include common CMake settings
+include("${STEINWURF_RESOLVE}/toolchains/common_settings.cmake")
 
 # Define library
 add_library(source_location INTERFACE)
@@ -40,4 +42,8 @@ if(${CMAKE_PROJECT_NAME} STREQUAL ${PROJECT_NAME})
   # Build executables
   add_executable(format example/main.cpp)
   target_link_libraries(format source_location)
+
+  enable_testing()
+  add_test(format format)
+
 endif()

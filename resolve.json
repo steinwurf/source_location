@@ -1,20 +1,21 @@
 [
   {
-    "name": "waf-tools",
-    "resolver": "git",
-    "method": "semver",
-    "major": 5,
-    "sources": [
-      "github.com/steinwurf/waf-tools.git"
-    ]
-  },
-  {
     "name": "source_location-source",
     "resolver": "git",
     "method": "checkout",
     "checkout": "e384945",
     "sources": [
       "github.com/flagarde/source_location.git"
+    ]
+  },
+  {
+    "name": "toolchains",
+    "internal": true,
+    "resolver": "git",
+    "method": "semver",
+    "major": 1,
+    "sources": [
+      "github.com/steinwurf/cmake-toolchains.git"
     ]
   }
 ]
