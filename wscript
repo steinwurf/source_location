@@ -6,26 +6,22 @@ APPNAME = "source_location"
 VERSION = "1.0.0"
 
 
-def configure(conf):
-    conf.set_cxx_std(11)
+def options(ctx):
+
+    ctx.load("cmake")
 
 
-def build(bld):
-    # Path to the source_location repo
-    source_location_path = bld.dependency_node("source_location-source")
+def configure(ctx):
 
-    # Create system include for source_location
-    source_location_include = source_location_path.find_dir("include")
+    ctx.load("cmake")
 
-    bld(
-        name="source_location",
-        export_includes=source_location_include.abspath()
-    )
+    if ctx.is_toplevel():
+        ctx.cmake_configure()
 
-    if bld.is_toplevel():
-        bld.program(
-            features="cxx test",
-            source=["example/main.cpp"],
-            target="source_location_tests",
-            use=["source_location"],
-        )
+
+def build(ctx):
+
+    ctx.load("cmake")
+
+    if ctx.is_toplevel():
+        ctx.cmake_build()
