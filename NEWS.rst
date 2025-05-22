@@ -6,6 +6,10 @@ every change, see the Git log.
 
 Latest
 ------
+* tbd
+
+2.0.0
+-----
 * Major: Only CMake build system is supported.
 
 1.0.0
